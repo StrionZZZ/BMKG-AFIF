@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER LOKASI + SUHU SEKARANG -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@android:color/white"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/tvLokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sambiroto, Tembalang"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#222222" />
+
+            <TextView
+                android:id="@+id/tvSuhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="28°"
+                android:textSize="46sp"
+                android:textStyle="bold"
+                android:textColor="#111111"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvCuaca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berawan"
+                android:textSize="18sp"
+                android:textColor="#555555"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvSubLokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kota Semarang"
+                android:textSize="14sp"
+                android:textColor="#888888"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- LIST CUACA PER JAM -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prakiraan per Jam"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="4dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvJam"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+        </LinearLayout>
+
+        <!-- LIST PRAKIRAAN 5 HARI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvDailyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prakiraan 5 Hari"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDaily"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
